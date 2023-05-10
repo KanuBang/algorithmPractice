@@ -15,19 +15,19 @@ public class Stick1094 {
             half /= 2;
 
             // sum - half는 위에서 자른 막대의 절반 중 하나를 버리고 남아있는 막대의 길이의 합이다.
-            // 이 합이 n보다 작을때는 막대기가 추가된다.
+            // 이 합이 n보다 작을때는 쪼개진 막대기 두개가 모두 살아남기에 결과적으로 막대기 1개가 추가된다.
             if (sum - half < n) {
                 stickCnt++;
                 continue;
             }
 
-            else if (sum - half > n) {
-                sum = sum - half;
+            else if (sum - half == n) {
+                break;
             }
 
             // sum-half = n인 순간 답은 구해졌다.
             else {
-                break;
+                sum = sum - half;
             }
         }
 
