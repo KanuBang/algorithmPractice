@@ -15,6 +15,7 @@ def bfs(graph, start, visited):
             if not visited[i]:
                 queue.append(i)
                 visited[i] = True
+'''
 graph = [
     [],
     [2,3,8],
@@ -26,8 +27,34 @@ graph = [
     [2,6,8],
     [1,7]
 ]
+'''
+
+graph = [
+    [],
+    [2,3,5],
+    [4,5],
+    [5,6],
+    [5,8],
+    [6],
+    [7,9],
+    [4,5,8],
+    [],
+    [7,8]
+]
+'''
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+'''
 
 # 각 노드가 방문된 정보를 리스트 자료형으로 표현(1차원 리스트)
-visited = [False] * 9
+visited = [False] * 10
 
 bfs(graph, 1, visited)
