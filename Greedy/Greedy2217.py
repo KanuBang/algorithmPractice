@@ -1,3 +1,5 @@
+import sys
+input = sys.stdin.readline
 line = int(input().rstrip())
 maxWeight = [int(input().rstrip()) for i in range(0,line)]
 maxWeight.sort()
