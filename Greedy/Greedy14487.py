@@ -27,11 +27,9 @@ max가 중복되는 경우
 import time
 start = time.time()
 
-
-v = list(map(int, input().split()))
-print(sum(v) - max(v))
-
-
+input()
+a=[*map(int,input().split())]
+print(sum(a)-max(a))
 
 end = time.time()
 print(end - start)
