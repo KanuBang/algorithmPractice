@@ -73,22 +73,17 @@ A = 0
 '''
 
 import time
-from string import ascii_uppercase
 
 start_time = time.time()
 
-s = input()
-alphabet_list = list(ascii_uppercase)
-ptr = 'A'
-sum = 0
 
-for i in s:
-    val = abs(alphabet_list.index(ptr) - alphabet_list.index(i))
-    sum += min(val, 26-val)
+ptr,sum = ['A',0]
+
+for i in input().rstrip():
+    sum += min(abs(ord(ptr) - ord(i)), 26-abs(ord(ptr) - ord(i)))
     ptr = i
 
 print(sum)
-
 
 
 end_time = time.time()
