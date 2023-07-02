@@ -112,7 +112,7 @@ if print(0) if l ==1 and a[0] % 2 == 1 else print(a[0]) if l == 1 else True:
 
 
 #print(0) if len(a)==1 and a[0] % 2 == 1 else print(0) if len(a) != 1 else y = False
-print(c=False)
+#print(c=False)
 
 
 end = time.time()
