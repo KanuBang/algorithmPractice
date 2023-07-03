@@ -25,15 +25,16 @@
 import time
 start = time.time()
 n = int(input().rstrip())
-ans = []
+
 for i in range(n):
     k = int(input().rstrip()) + 1
     while '0' in str(k):
         k = k + 1
-    ans.append(k)
+    print(k)
 
-for i in range(n):
-    print(ans[i])
+
+
+
 
 
 end = time.time()
