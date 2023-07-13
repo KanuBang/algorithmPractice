@@ -40,9 +40,6 @@ no
 '''
 words = input().split()
 ans = "yes"
-number = 1
-
-
 
 while len(words) > 1:
     target = words.pop()
@@ -50,8 +47,6 @@ while len(words) > 1:
         if i == target:
             ans = "no"
             break
-
-
 print(ans)
 
 '''
