@@ -15,7 +15,6 @@ bundle = [None]
 while bundle[-1] != "END":
     bundle.append(input())
 
-#print(bundle)
 for i in bundle:
     pr = True
     if i == None:
