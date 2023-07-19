@@ -40,8 +40,8 @@ for i in range(int(input())):
     for j in range(n):
         c[input().strip()] = 0
     for k in range(m):
-        strToArr = input().split()
-        c[strToArr[0]] += int(strToArr[1])
+        s = input().split()
+        c[s[0]] += int(s[1])
     
     a = list(c.values())
     
