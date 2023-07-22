@@ -1,14 +1,7 @@
-n = int(input())
-student = input().split()
-result = {string : 0 for string in student}	# 딕셔너리 변환
+import sys
 
-for _ in range(n) :
-    a = list(input().split())
-    for i in a :
-        result[i] += 1
+input = sys.stdin.readline
 
-print(result.items())
-sort_dict = sorted(result.items(), key=lambda x: x[1], reverse=True)
-
-for key, value in sort_dict :	# 출력
-    print(key, value)
+n1,k1,n2,k2 = map(int,input().split())
+val = n1*int(k1) + n2*int(k2)
+print(val)
