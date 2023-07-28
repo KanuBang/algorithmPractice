@@ -7,13 +7,11 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-ans = []
+
 for i in range(n):
     myList = list(map(int, input().split()))
     sortedArr = sorted(myList,key = lambda x: x, reverse=False)
     if max(sortedArr[1:4]) - min(sortedArr[1:4]) >= 4:
-        ans.append("KIN")
+        print("KIN")
     else:
-        ans.append(sum(sortedArr[1:4]))
-
-[print(i) for i in ans]
+        print(sum(sortedArr[1:4]))
