@@ -1,20 +1,22 @@
-r,c = map(int, input().split())
-cnt = 2
-one = []
-two = []
-ans = 0
-while cnt > 0:
-    if cnt == 2:
-        for i in range(c):
-            tar = list(map(int, input().split()))
-            one.append(tar)
-    else:
-        for i in range(c):
-            tar = list(map(int, input().split()))
-            two.append(tar)
-    cnt -= 1
+'''
+5
+4 1 5 2 3
+5
+1 3 7 9 5
 
-for i in range(c):
-    for j in range(r):
-        print(one[i][j] + two[i][j], end=" ")
-    print()
+1
+1
+0
+0
+1
+'''
+
+'''
+4
+-100 100
+2 3
+0 110101
+-1000000000 1
+'''
+
+print(len(input().split()))
