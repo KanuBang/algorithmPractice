@@ -12,8 +12,9 @@ A-B = { 1 } 이고, B-A = { 3, 5, 6 } 이므로, 대칭 차집합의 원소의 �
 
 딱 봐도 N에 짜라는 말씀...
 '''
-
-input().split()
+import sys
+input=sys.stdin.readline
+input()
 q = set(input().split())
 w = set(input().split())
 print(len(q^w))
