@@ -40,3 +40,4 @@ for i in range(sites):
 
 for i in range(n):
     print(myDict[input().strip()])
+
