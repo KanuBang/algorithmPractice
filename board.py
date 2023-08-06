@@ -19,4 +19,10 @@
 -1000000000 1
 '''
 
-print(len(input().split()))
+a = len(input())
+b = len(input())
+
+if a >= b:
+    print("go")
+else:
+    print("no")
