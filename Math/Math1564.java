@@ -42,7 +42,7 @@ public class Math1564 {
         double fakeAvg = 0;
         for(int i = 0; i < subs.length; i++) {
             if(subs[i] > max) {
-                subs[i] = max;
+                max = subs[i];
             }
             sum += subs[i];
         }
