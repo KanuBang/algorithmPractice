@@ -10,23 +10,19 @@ d[5] = 1
 
 n = int(input())
 
-
 for i in range(6, n+1):
 
-    first = 100000
-    second = 100000
+    f = 1000
+    s = 1000
     if d[i-3] != -1:
-        # d[i] = d[i-3] + d[3]
-        first = d[i-3] +d[3]
+        f = d[i-3] +d[3]
     
     if d[i-5] != -1:
-        # d[i] = d[i-5] + d[5]
-        second = d[i-5] + d[5]
+        s = d[i-5] + d[5]
 
     if d[i-3] == -1 and d[i-5] == -1: 
-        first = -1
+        f = -1
 
-    d[i] = min(first,second)
+    d[i] = min(f,s)
         
-
 print(d[n])
