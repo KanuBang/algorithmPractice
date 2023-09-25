@@ -7,7 +7,6 @@ start,end = (0,-1)
 for i in range(n):
     nums.append(list(map(int,input().split())))
 
-
 for i in range(1,n):
     size = len(nums[i])
     end += 1
