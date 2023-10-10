@@ -1,28 +1,14 @@
-'''
-5
-4 1 5 2 3
-5
-1 3 7 9 5
+import math
+import random
 
-1
-1
-0
-0
-1
-'''
+ans = []
+n = int(input())
+for i in range(1,n):
+    for j in range(1,n):
+        ans.append(i*j)
 
-'''
-4
--100 100
-2 3
-0 110101
--1000000000 1
-'''
+for i in range(n):
+    print(ans[i], end=' ')
 
-a = len(input())
-b = len(input())
 
-if a >= b:
-    print("go")
-else:
-    print("no")
+print(random.randrange(1,49))
