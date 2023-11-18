@@ -1,4 +1,5 @@
-str = "python"
-my_list = list(str)
+import sys
 
-print(my_list)
+input = sys.stdin.readline
+
+print(input().rstrip())

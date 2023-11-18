@@ -1,0 +1,10 @@
+korea 539
+serbia 523
+china 517
+algeria 515
+peru 511
+brazil 507
+turkey 495
+mexico 472
+japan 471
+france 450
