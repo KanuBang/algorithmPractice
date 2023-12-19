@@ -33,12 +33,15 @@ def dfs(graph, node, visited):
 
 import sys
 from collections import deque
-input = sys.stdin.readline
+input = sys.stdin.readline # 입출력 속도가 느리기에 위해서 이거는 그냥 무조건 쓰는게 맞는 거 같다.
+# 이 고작 몇 글작 추가되는 게 중요한 게 아니라 속도 올릴 수 있는 게 더 메리트가 있다.
 n = int(input())
 graph = [ [] for i in range(n+1)]
 visitied = [False] * (n+1)
 # DFS를 이용했다면 BFS로
 
+# dfs를 사용하면 재귀 에러가 발생. 다이나믹 프로그래밍을 재귀로 구현하지 않는 이유와 비슷하다.
+# 이래서 dfs보다 bfs를 많이 쓰는 듯하다.
 def bfs(graph,node, visited):
     queue = deque([node])
     visited[node] = True
