@@ -33,7 +33,8 @@ def dfs(graph, node, visited):
 
 import sys
 from collections import deque
-input = sys.stdin.readline # 입출력 속도가 느리기에 위해서 이거는 그냥 무조건 쓰는게 맞는 거 같다.
+input = sys.stdin.readline 
+# 입출력 속도가 느리기에 위해서 이거는 그냥 무조건 쓰는게 맞는 거 같다.
 # 이 고작 몇 글작 추가되는 게 중요한 게 아니라 속도 올릴 수 있는 게 더 메리트가 있다.
 n = int(input())
 graph = [ [] for i in range(n+1)]
