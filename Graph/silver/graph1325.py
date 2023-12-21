@@ -35,6 +35,7 @@ N은 10,000보다 작거나 같은 자연수, M은 100,000보다 작거나 같�
 import sys 
 from collections import deque
 
+# 정보를 받아 방향 그래프 graph를 생성한다.
 input = sys.stdin.readline
 n,m = map(int, input().split())
 graph = [[] for _ in range(n+1)]
@@ -43,11 +44,10 @@ for i in range(m):
     a,b = map(int, input().split())
     graph[b].append(a)
 
-v = 0
-
+# bfs 탐색
 def bfs(graph,v):
     visited = [False] * (n+1)    
-    infect = 0
+    infect = 0 # 감염된 컴퓨터의 수
     queue = deque([v])
     visited[v] = True
 
@@ -57,14 +57,12 @@ def bfs(graph,v):
             if not visited[i]:
                 visited[i] = True
                 queue.append(i)
-                infect += 1
+                infect += 1 # 탐색됨 = 감염됨 -> 감염 + 1
     
-    return infect
+    return infect # 시작 노드가 x일 때, 감염된 컴퓨터의 수
 
-maxEdge = 0
-cnt = [bfs(graph,i) for i in range(1,n+1)]
-
+# 시작 노드가 인덱스 i일 때 감염된 컴퓨터의 수
+cnt = [bfs(graph,i) for i in range(1, n+1)]
 cnt_max = max(cnt)
-ans = []
-
+# 정답 출력
 [print((i+1), end=" ") for i in range(0,n) if cnt_max == cnt[i]]
