@@ -21,7 +21,7 @@ def dfs(x,y):
     
     if graph[x][y] == 1:
         cnt += 1
-        graph[x][y] += 1
+        graph[x][y] = 0
         dfs(x-1,y)
         dfs(x,y-1)
         dfs(x+1,y)
@@ -34,10 +34,10 @@ result = 0
 ans = []
 for i in range(n):
     for j in range(n):
-        cnt = 0
         if dfs(i,j) == True:
             result += 1
             ans.append(cnt)
+            cnt = 0
 
 print(result)
 [print(i) for i in sorted(ans)]
