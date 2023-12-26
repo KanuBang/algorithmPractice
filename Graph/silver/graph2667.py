@@ -34,10 +34,10 @@ result = 0
 ans = []
 for i in range(n):
     for j in range(n):
+        cnt = 0
         if dfs(i,j) == True:
             result += 1
             ans.append(cnt)
-            cnt = 0
 
 print(result)
 [print(i) for i in sorted(ans)]
