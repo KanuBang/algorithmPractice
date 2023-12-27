@@ -2,13 +2,7 @@ import sys
 from collections import deque
 
 input = sys.stdin.readline
-'''
-3 3
-1 0 1
-1 0 1
-1 0 0
-3
-'''
+
 def bfs(len_w, len_h, graph):
     queue = deque()
     # 상,하,좌,우 + 왼쪽 위 대각선, 왼쪽 아래 대각선, 오른쪽 위 대각선, 오른쪽 아래 대각선
@@ -36,8 +30,6 @@ def bfs(len_w, len_h, graph):
                         
                         queue.append((nw,nh))
                         graph[nh][nw] = 0
-                print(queue)
-
 
     return land
 
