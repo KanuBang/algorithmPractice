@@ -1,6 +1,7 @@
 import sys
 from collections import deque
 
+sys.setrecursionlimit(2500)
 input = sys.stdin.readline
 m,n,r = map(int,input().split())
 graph = [[] for _ in range(m+1)]
@@ -12,22 +13,20 @@ for i in range(n):
 
 [graph[i].sort(reverse=True) for i in range(1,m+1)]
 
-def bfs(graph, i, visited,ans):
-    queue = deque([i])
+cnt = 0
+def dfs(graph, i, visited):
+    global cnt
+    cnt += 1
     visited[i] = True
-    cnt = 0
-    while queue:
-        cnt += 1
-        v = queue.popleft()
-        ans[v] = cnt
+    ans[i] = cnt
+    for v in graph[i]:
+        if not visited[v]:
+            dfs(graph, v, visited)
+    return None
 
-        for r in graph[v]:
-            if not visited[r]:
-                queue.append(r)
-                visited[r] = True
-    
+
 visited = [False] * (m+1)
 ans = [0] * (m+1)
-bfs(graph,r,visited,ans)
-[print(ans[k]) for k in range(1,m+1)]
+dfs(graph, r, visited)
+[print(ans[i]) for i in range(1, m+1)]
 
