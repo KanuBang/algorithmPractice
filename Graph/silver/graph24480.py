@@ -1,7 +1,7 @@
 import sys
 from collections import deque
 
-sys.setrecursionlimit(2500)
+sys.setrecursionlimit(100001)
 input = sys.stdin.readline
 m,n,r = map(int,input().split())
 graph = [[] for _ in range(m+1)]
