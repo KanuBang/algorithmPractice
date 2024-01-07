@@ -5,9 +5,6 @@ input = sys.stdin.readline
 
 n = int(input())
 
-# push, pop, front, back, empty, size:
-
-
 queue = deque()
 def isEmpty(queue):
     return not queue
