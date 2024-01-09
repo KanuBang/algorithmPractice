@@ -3,6 +3,7 @@ from collections import deque
 input = sys.stdin.readline
 
 n = int(input())
+indexData,priority = 0,1
 
 while n > 0:
 
@@ -12,20 +13,18 @@ while n > 0:
     printedOrder = 0
 
     while True:
-        beforeSize = len(queue)
-        front = queue.popleft()
-
+        beforeSize,front = len(queue),queue.popleft()
         for item in queue:
-            if item[1] > front[1]:
+            if item[priority] > front[priority]:
                 queue.append(front)
                 break
         
-        nowSize = len(queue)
+        currentSize = len(queue)
         
-        if beforeSize != nowSize:
+        if beforeSize != currentSize:
             printedOrder += 1
         
-            if front[0] == targetIdx:
+            if front[indexData] == targetIdx:
                 print(printedOrder)
                 break
         
